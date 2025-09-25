@@ -98,6 +98,8 @@ public class BackgroundGeolocationPlugin extends Plugin {
         if (activity != null) {
             bgGeo.setActivity(activity);
         }
+            // Register headless task
+        BackgroundGeolocation.registerHeadlessTask(getContext(), MyHeadlessTask.class);
     }
 
     private void handlePlayServicesConnectError(Integer errorCode) {
